@@ -1,55 +1,21 @@
 # EON — Energy Outlook Nexus
 
-**Understanding Energy. Shaping Tomorrow.**
+Static, GitHub Pages-ready demonstration of an editorial energy platform. All editorial, people, posts, data values and episodes are clearly marked **DEMO / SAMPLE**; they are not assertions of real-world fact.
 
-This repository contains the EON V2 frontend: a premium energy media/research/community interface designed for GitHub Pages.
+## Run locally
 
-## Important brand rule
+Serve this folder with any static web server (for example `python -m http.server`) and open the served URL. The site uses relative paths and works on GitHub Pages project hosting.
 
-This site uses **only the EON symbol image explicitly supplied/approved for this build**:
+## Content & future backend
 
-`assets/images/eon-approved-symbol.png`
+Structured demo content is in `data/`. `assets/js/app.js` fetches it into a small client-side content layer; replace the adapter with a CMS/API adapter later. LocalStorage powers demo likes, bookmarks, comments, newsletter subscriptions and contributor submissions. In production, authentication, moderation, storage, validation, rate limiting, consent and a server-side API are required.
 
-No alternate or unapproved generated logo is used.
+Community content must remain in `pending`, `approved`, `rejected`, or `flagged` states; only approved material belongs in public feeds. Future admin functions should manage users, submissions, comments, sources, datasets, articles and episodes behind authenticated authorization.
 
-## Included
-- Sticky EON header with persistent logo
-- Responsive navigation
-- Search overlay
-- Latest stories / editorial layout
-- EON Outlook
-- Community posts
-- Demo likes, comments and share
-- Research section
-- Data section
-- EON Conversations
-- Write-for-EON submission interface
-- Responsive mobile layout
-- Accessibility-minded controls
-- GitHub Pages compatible static frontend
+## Logo
 
-## Static-site limitation
+`assets/images/eon-approved-logo.png` must be the supplied approved EON image, copied byte-for-byte without geometry or visual-identity changes. The HTML never recreates or redraws the mark.
 
-GitHub Pages is static hosting. Real multi-user accounts, persistent likes/comments, moderation and public article publishing require a backend/database.
+## Deployment
 
-This version includes demo interactions using browser local storage.
-
-For production, connect the frontend to a backend such as Supabase/Firebase or another hosted database/API.
-
-For live "latest stories" from other publishers, use licensed/approved RSS or API sources through a safe aggregation layer. Do not scrape third-party publishers directly in the browser.
-
-## Deploy
-
-Keep `index.html` at the repository root.
-
-GitHub:
-**Settings → Pages → Deploy from a branch → main → / (root)**
-
-## Next steps
-1. Replace the approved PNG with your final vector SVG logo once you have the official production asset.
-2. Add real article pages and CMS-like publishing.
-3. Add backend auth, moderation, likes and comments.
-4. Add approved news/RSS/API aggregation.
-5. Add verified energy datasets and interactive charts.
-6. Connect YouTube/podcast episodes.
-7. Add analytics and SEO.
+Publish the `EON-WEBSITE` directory with GitHub Pages. Update canonical/OG URLs in the HTML template before production launch.
