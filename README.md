@@ -14,7 +14,7 @@ Community content must remain in `pending`, `approved`, `rejected`, or `flagged`
 
 ## Logo
 
-`assets/images/eon-approved-logo.png` must be the supplied approved EON image, copied byte-for-byte without geometry or visual-identity changes. The HTML never recreates or redraws the mark.
+`assets/images/eon-approved-logo.png` is the supplied approved EON image, copied without geometry or visual-identity changes. `assets/images/eon-brand-reference.png` preserves the supplied brand-reference/banner asset. The HTML never recreates or redraws the mark.
 
 ## Deployment
 
