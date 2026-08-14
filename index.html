@@ -1,29 +1,336 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="EON — Energy Outlook Nexus. Understanding Energy. Shaping Tomorrow.">
-<meta name="theme-color" content="#071B3A"><title>EON — Energy Outlook Nexus</title>
-<link rel="icon" type="image/png" href="assets/images/eon-symbol.png"><link rel="stylesheet" href="css/style.css">
-</head><body>
-<header><a class="brand" href="#top"><img src="assets/images/eon-symbol.png" alt="EON symbol"><span><b>EON</b><small>ENERGY OUTLOOK NEXUS</small></span></a>
-<button class="menu">☰</button><nav><a href="#outlook">Outlook</a><a href="#conversations">Conversations</a><a href="#research">Research</a><a href="#data">Data</a><a href="#about">About</a></nav></header>
-<main id="top">
-<section class="hero"><div><p class="eyebrow">ENERGY • ECONOMICS • POLICY • DATA</p>
-<h1>Understanding <em>Energy.</em><br>Shaping <em>Tomorrow.</em></h1>
-<p class="lead">EON is an energy economics media and research platform exploring the systems, policies, markets and technologies shaping the future of energy.</p>
-<a class="btn" href="#outlook">Explore EON</a> <a class="btn ghost" href="#conversations">Conversations</a></div>
-<div class="hero-art"><div class="ring"></div><div class="curve one"></div><div class="curve two"></div><i></i><small>EON / 01</small></div></section>
-<div class="ticker">ENERGY MARKETS　 ENERGY TRANSITION　 PUBLIC POLICY　 ECONOMICS　 DATA & AI　 ENERGY SECURITY</div>
-<section id="outlook" class="section"><p class="eyebrow">01 — EON OUTLOOK</p><h2>Make sense of a changing energy system.</h2><p class="muted">Clear, evidence-led perspectives on the forces transforming energy and the economy.</p>
-<div class="grid"><article class="card dark"><small>FEATURED</small><h3>India's Energy Future</h3><p>Demand, supply, renewables, coal, nuclear power, markets and policy through an economic lens.</p><a href="#research">Read the outlook →</a></article>
-<article class="card"><small>EXPLAINER</small><h3>Energy Economics</h3><p>Complex concepts explained simply — from electricity markets to carbon pricing and energy security.</p><a href="#research">Coming soon →</a></article>
-<article class="card"><small>DATA</small><h3>Energy by the numbers</h3><p>Charts, indicators and visual stories that turn energy data into useful insight.</p><a href="#data">Explore data →</a></article></div></section>
-<section id="conversations" class="section dark-section"><p class="eyebrow">02 — EON CONVERSATIONS</p><h2>Talk to the people shaping energy.</h2><p class="muted">Long-form conversations with economists, researchers, professors, policymakers and industry voices.</p>
-<div class="episodes"><div class="pod"><strong>▶</strong><small>EON CONVERSATIONS</small><h3>Expert ideas. Real questions. Better energy decisions.</h3></div><div class="list"><p><b>01</b> India's Energy Transition <small>Coming soon</small></p><p><b>02</b> The Economics of Electricity <small>Coming soon</small></p><p><b>03</b> Nuclear Energy & India's Future <small>Coming soon</small></p></div></div></section>
-<section id="research" class="section"><p class="eyebrow">03 — RESEARCH</p><h2>From questions to evidence.</h2><p class="muted">Accessible research, policy analysis and student-led work on energy and economics.</p>
-<div class="research"><div><small>RESEARCH</small><h3>Energy Policy</h3><p>Independent perspectives on policy choices and their economic consequences.</p></div><div><small>ANALYSIS</small><h3>Markets & Economics</h3><p>Understanding prices, incentives, investment and market design.</p></div><div><small>FUTURES</small><h3>Transition & Technology</h3><p>Renewables, storage, nuclear, AI and technologies changing the system.</p></div></div></section>
-<section id="data" class="section data"><div><p class="eyebrow">04 — EON DATA</p><h2>See the energy system.</h2><p class="muted">Interactive charts and future tools will turn energy data into something you can explore and understand.</p></div><div class="chart"><div></div><span>ENERGY SYSTEMS / FUTURE</span></div></section>
-<section id="about" class="section about"><div><p class="eyebrow">05 — ABOUT EON</p><h2>A platform for the next generation of energy thinking.</h2></div><p>EON — Energy Outlook Nexus — connects energy economics, policy, research, data, technology and public conversation. We aim to make important energy questions understandable without making them simplistic.</p></section>
-</main>
-<footer><div class="brand"><img src="assets/images/eon-symbol.png" alt=""><span><b>EON</b><small>ENERGY OUTLOOK NEXUS</small></span></div><p>© <span id="year"></span> EON. Understanding Energy. Shaping Tomorrow.</p></footer>
-<script src="js/script.js"></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071B3A">
+  <meta name="description" content="EON — Energy Outlook Nexus. Energy, economics, policy, data, research and ideas.">
+  <title>EON — Energy Outlook Nexus</title>
+  <link rel="icon" type="image/png" href="assets/images/eon-approved-symbol.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="EON home">
+        <img src="assets/images/eon-approved-symbol.png" alt="EON approved symbol">
+        <span class="brand-text">
+          <strong>EON</strong>
+          <small>ENERGY OUTLOOK NEXUS</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#latest">Latest</a>
+        <a href="#outlook">Outlook</a>
+        <a href="#community">Community</a>
+        <a href="#research">Research</a>
+        <a href="#data">Data</a>
+        <a href="#conversations">Conversations</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="header-icon" id="openSearch" aria-label="Open search">⌕</button>
+        <a class="write-pill" href="#write">Write</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#latest">Latest</a>
+      <a href="#outlook">Outlook</a>
+      <a href="#community">Community</a>
+      <a href="#research">Research</a>
+      <a href="#data">Data</a>
+      <a href="#conversations">Conversations</a>
+      <a href="#write">Write for EON</a>
+    </div>
+  </header>
+
+  <div class="search-modal" id="searchModal" aria-hidden="true">
+    <div class="search-box">
+      <button class="search-close" id="closeSearch" aria-label="Close search">×</button>
+      <p class="eyebrow">SEARCH EON</p>
+      <h2>Find an idea, story or topic.</h2>
+      <label class="search-label" for="searchInput">Search the demo content</label>
+      <input id="searchInput" type="search" placeholder="Try coal, electricity, policy, nuclear..." autocomplete="off">
+      <div id="searchResults" class="search-results" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <main id="content">
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">ENERGY • ECONOMICS • POLICY • DATA</p>
+          <h1>The energy world,<br><em>made understandable.</em></h1>
+          <p class="hero-lede">
+            Independent perspectives, expert conversations, research, data and community ideas
+            about the systems shaping energy and the economy.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#latest">Explore stories</a>
+            <a class="btn btn-link" href="#conversations">Watch EON Conversations →</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-grid"></div>
+          <div class="hero-ring"></div>
+          <div class="hero-flow hero-flow-a"></div>
+          <div class="hero-flow hero-flow-b"></div>
+          <div class="hero-point"></div>
+          <div class="hero-art-label">EON / ENERGY OUTLOOK NEXUS</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="topic-bar" aria-label="Trending topics">
+      <span class="topic-heading">Trending</span>
+      <a href="#latest">India Energy Transition</a>
+      <a href="#latest">Electricity Markets</a>
+      <a href="#latest">Renewables</a>
+      <a href="#latest">Nuclear</a>
+      <a href="#latest">Energy Security</a>
+      <a href="#latest">AI & Energy</a>
+    </div>
+
+    <section class="section" id="latest">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">01 — LATEST</p>
+          <h2>Stories worth your attention.</h2>
+          <p class="section-intro">A clean, editorial front page for the ideas and events shaping energy now.</p>
+        </div>
+        <a class="view-all" href="#latest">View all →</a>
+      </div>
+
+      <div class="latest-layout">
+        <article class="feature-story story-card" data-search="electricity demand india energy markets">
+          <div class="feature-art">
+            <span>ENERGY<br>OUTLOOK</span>
+          </div>
+          <div class="story-meta">
+            <span>ENERGY MARKETS</span>
+            <span>8 MIN READ</span>
+          </div>
+          <h3>India's electricity demand is entering a new era.</h3>
+          <p>What rising demand could mean for grids, generation, investment and energy policy.</p>
+          <a href="#research">Read the analysis →</a>
+        </article>
+
+        <div class="story-list">
+          <article class="list-story story-card" data-search="coal india energy policy">
+            <div class="story-thumb thumb-1"></div>
+            <div>
+              <span>POLICY</span>
+              <h3>Why India can't quit coal yet.</h3>
+              <small>6 min read · EON Analysis</small>
+            </div>
+          </article>
+
+          <article class="list-story story-card" data-search="electricity bill economics prices">
+            <div class="story-thumb thumb-2"></div>
+            <div>
+              <span>ECONOMICS</span>
+              <h3>The hidden economics behind your electricity bill.</h3>
+              <small>5 min read · EON Explains</small>
+            </div>
+          </article>
+
+          <article class="list-story story-card" data-search="nuclear india technology energy">
+            <div class="story-thumb thumb-3"></div>
+            <div>
+              <span>TECHNOLOGY</span>
+              <h3>Can nuclear become India's next energy pillar?</h3>
+              <small>7 min read · EON Outlook</small>
+            </div>
+          </article>
+
+          <article class="list-story story-card" data-search="grid peak electricity demand data">
+            <div class="story-thumb thumb-4"></div>
+            <div>
+              <span>DATA</span>
+              <h3>What happens when the grid suddenly peaks?</h3>
+              <small>4 min read · EON Data</small>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="outlook">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">02 — EON OUTLOOK</p>
+          <h2>Go deeper than the headline.</h2>
+          <p class="section-intro">Context, evidence and economic reasoning behind the stories everyone is talking about.</p>
+        </div>
+      </div>
+
+      <div class="three-up">
+        <article class="topic-card">
+          <span>INDIA</span>
+          <h3>Energy transition</h3>
+          <p>Demand, supply, renewables, coal, nuclear and the policy choices connecting them.</p>
+          <a href="#research">Explore →</a>
+        </article>
+        <article class="topic-card">
+          <span>GLOBAL</span>
+          <h3>Energy security</h3>
+          <p>Markets, geopolitics, trade and the changing architecture of global energy.</p>
+          <a href="#research">Explore →</a>
+        </article>
+        <article class="topic-card">
+          <span>FUTURES</span>
+          <h3>Technology</h3>
+          <p>Storage, grids, hydrogen, AI, nuclear and technologies changing the system.</p>
+          <a href="#research">Explore →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="community">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">03 — EON COMMUNITY</p>
+          <h2>Ideas from the energy community.</h2>
+          <p class="section-intro">Students, researchers and practitioners can share thoughtful energy-focused perspectives.</p>
+        </div>
+        <a class="view-all" href="#write">Share your idea →</a>
+      </div>
+
+      <div class="post-grid" id="postGrid">
+        <article class="post-card" data-post-id="p1">
+          <div class="post-author">
+            <div class="avatar">EP</div>
+            <div><strong>EON Perspective</strong><small>Today · Energy</small></div>
+          </div>
+          <p>Energy transition is not only a technology problem. It is also an economics, institutions and incentives problem.</p>
+          <div class="post-actions">
+            <button class="like-btn" data-like="p1">♡ <span>42</span></button>
+            <button class="comment-btn" data-comment="c1">💬 <span>8</span></button>
+            <button class="share-btn" data-share="Energy transition is also an economics problem. — EON">↗ Share</button>
+          </div>
+          <div class="comments" id="c1"></div>
+        </article>
+
+        <article class="post-card" data-post-id="p2">
+          <div class="post-author">
+            <div class="avatar">AR</div>
+            <div><strong>Arjun R.</strong><small>Yesterday · Electricity</small></div>
+          </div>
+          <p>What should India's electricity market look like if storage becomes dramatically cheaper?</p>
+          <div class="post-actions">
+            <button class="like-btn" data-like="p2">♡ <span>31</span></button>
+            <button class="comment-btn" data-comment="c2">💬 <span>5</span></button>
+            <button class="share-btn" data-share="What should India's electricity market look like if storage becomes cheaper?">↗ Share</button>
+          </div>
+          <div class="comments" id="c2"></div>
+        </article>
+
+        <article class="post-card" data-post-id="p3">
+          <div class="post-author">
+            <div class="avatar">MS</div>
+            <div><strong>Meera S.</strong><small>2 days ago · Policy</small></div>
+          </div>
+          <p>Carbon pricing sounds simple in theory. Designing a system people and firms can actually respond to is much harder.</p>
+          <div class="post-actions">
+            <button class="like-btn" data-like="p3">♡ <span>27</span></button>
+            <button class="comment-btn" data-comment="c3">💬 <span>4</span></button>
+            <button class="share-btn" data-share="Carbon pricing sounds simple in theory.">↗ Share</button>
+          </div>
+          <div class="comments" id="c3"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="research">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">04 — RESEARCH</p>
+          <h2>Evidence before opinion.</h2>
+          <p class="section-intro">Research, explainers and policy analysis designed to be rigorous without being difficult to read.</p>
+        </div>
+      </div>
+
+      <div class="research-grid">
+        <article><span>RESEARCH</span><h3>Energy Policy</h3><p>Policy choices, institutions and their economic consequences.</p><a href="#write">Publish research →</a></article>
+        <article><span>ANALYSIS</span><h3>Markets & Economics</h3><p>Prices, incentives, investment, market design and demand.</p><a href="#write">Submit an idea →</a></article>
+        <article><span>EXPLAINERS</span><h3>Energy 101</h3><p>Clear answers to difficult energy questions.</p><a href="#write">Suggest a topic →</a></article>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="data">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">05 — EON DATA</p>
+          <h2>See the system.</h2>
+          <p class="section-intro">A future home for interactive energy indicators, charts and visual stories.</p>
+        </div>
+      </div>
+
+      <div class="metrics-grid">
+        <article><small>INDIA ELECTRICITY</small><strong>Demand</strong><span>Interactive dashboard</span></article>
+        <article><small>RENEWABLES</small><strong>Capacity</strong><span>Interactive dashboard</span></article>
+        <article><small>ENERGY SECURITY</small><strong>Imports</strong><span>Interactive dashboard</span></article>
+        <article><small>EMISSIONS</small><strong>Carbon</strong><span>Interactive dashboard</span></article>
+      </div>
+      <div class="data-note">Production version can connect this UI to verified public datasets and a lightweight data layer.</div>
+    </section>
+
+    <section class="section conversations" id="conversations">
+      <div>
+        <p class="eyebrow">06 — EON CONVERSATIONS</p>
+        <h2>Ask better questions.</h2>
+        <p class="section-intro">Conversations with economists, researchers, professors, policymakers and practitioners shaping the energy debate.</p>
+        <a class="btn btn-primary" href="#write">Suggest a guest</a>
+      </div>
+      <article class="episode">
+        <div class="episode-art"><span class="play">▶</span><small>EON CONVERSATIONS / 001</small></div>
+        <h3>Can India really become a renewable energy superpower?</h3>
+        <p>Coming soon · Expert conversation</p>
+      </article>
+    </section>
+
+    <section class="section write-section" id="write">
+      <div>
+        <p class="eyebrow">07 — WRITE FOR EON</p>
+        <h2>Have an energy idea?</h2>
+        <p class="section-intro">
+          Students, researchers and practitioners can submit original energy-focused articles,
+          analysis and perspectives. Submissions are reviewed before publication.
+        </p>
+        <div class="submission-flow">
+          <span>01 Submit</span><span>02 EON Review</span><span>03 Publish</span>
+        </div>
+      </div>
+
+      <form class="write-form" id="writeForm">
+        <input id="authorName" required placeholder="Your name">
+        <input id="authorEmail" type="email" required placeholder="Email">
+        <input id="postTitle" required placeholder="Post title">
+        <select id="postCategory">
+          <option>Energy</option><option>Economics</option><option>Policy</option><option>Technology</option><option>Data</option>
+        </select>
+        <textarea id="postBody" rows="8" required placeholder="Write your idea..."></textarea>
+        <button class="btn btn-primary" type="submit">Submit for review</button>
+        <small>Demo mode: submissions are stored locally in this browser. A production site will connect this form to a moderated database.</small>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="assets/images/eon-approved-symbol.png" alt="">
+      <div><strong>EON</strong><small>ENERGY OUTLOOK NEXUS</small></div>
+    </div>
+    <div class="footer-links"><a href="#research">Research</a><a href="#conversations">YouTube</a><a href="#write">Write</a></div>
+    <p>© <span id="year"></span> EON. Understanding Energy. Shaping Tomorrow.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
